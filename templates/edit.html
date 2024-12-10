@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{% url 'edit_employee_details' employee.id %}">
+        {% csrf_token %}
+        <label>Employee Name</label>
+        <input type="text" name="emp_name" value="{{employee.employ_name}}"><br>
+        <label>Department</label>
+        <input type="text" name="dept_name" value="{{employee.department}}"><br>
+        <label>Age</label>
+        <input type="text" name="age" value="{{employee.age}}"><br>
+        <label>Email</label>
+        <input type="text" name="email" value="{{employee.email}}"><br>
+        <label>Contact number</label>
+        <input type="text" name="contact_num" value="{{employee.contact_number}}"><br>
+        <button type="submit">Update</button>
+    </form>
+   
+</body>
+</html>

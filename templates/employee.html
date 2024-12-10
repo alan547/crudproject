@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <center>
+    <table>
+    <form action="{% url 'add_employee' %}" method="post">
+        {% csrf_token %}
+        <tr>
+            <td><label style="font-size: 23px;">employee name</label></td>
+            <td><input type="text" name="employee_name"></td>
+        </tr>
+        <tr>
+            <td><label style="font-size: 23px;">Department</label></td>
+            <td><input type="text" name="employee_dept"></td>
+
+        </tr>
+        <tr>
+            <td><label style="font-size: 23px;">age</label></td>
+            <td><input type="number" name="employee_age"></td>
+        </tr>
+        <tr>
+            <td><label style="font-size: 23px;">Email</label></td>
+            <td><input type="Email" name="employee_email"></td>
+        </tr>
+        <tr>
+            <td><label style="font-size: 23px;">Contact Number</label></td>
+            <td><input type="text" name="contact_num"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+
+    </form>
+    </table>
+</center> 
+</body>
+</html>
